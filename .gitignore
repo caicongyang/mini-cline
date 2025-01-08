@@ -18,5 +18,5 @@ roo-cline-*.vsix
 .history
 
 .env
-
 .vscode
+.vscode-test
