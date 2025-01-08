@@ -1,0 +1,71 @@
+@startuml AI Agent Architecture
+
+' 样式设置
+skinparam componentStyle rectangle
+skinparam monochrome true
+skinparam shadowing false
+
+' 主要组件
+package "Cline AI Agent" {
+    component "System Prompt" as SP
+    component "Tool Manager" as TM
+    component "Context Manager" as CM
+    component "Conversation Loop" as CL
+    component "Response Parser" as RP
+}
+
+' 工具集
+package "Tools" {
+    component "File Operations" as FO {
+        component "read_file"
+        component "write_to_file"
+        component "apply_diff"
+    }
+    component "System Tools" as ST {
+        component "execute_command"
+        component "list_files"
+        component "search_files"
+    }
+    component "Browser Tools" as BT {
+        component "browser_action"
+    }
+    component "MCP Tools" as MT {
+        component "use_mcp_tool"
+        component "access_mcp_resource"
+    }
+}
+
+' 上下文管理
+package "Context" {
+    component "VSCode State" as VS {
+        component "Open Files"
+        component "Active Editor"
+        component "Terminal State"
+    }
+    component "Environment" as ENV {
+        component "Working Directory"
+        component "File System"
+        component "System Info"
+    }
+}
+
+' 关系定义
+User --> CL : 输入任务
+CL --> SP : 初始化
+SP --> TM : 定义可用工具
+SP --> CM : 定义上下文需求
+
+CL --> CM : 获取上下文
+CM --> VS : 收集 VSCode 状态
+CM --> ENV : 收集环境信息
+
+CL --> TM : 执行工具
+TM --> FO : 文件操作
+TM --> ST : 系统操作
+TM --> BT : 浏览器操作
+TM --> MT : MCP 工具调用
+
+CL --> RP : 解析响应
+RP --> User : 返回结果
+
+@enduml 

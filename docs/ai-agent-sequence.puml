@@ -1,0 +1,48 @@
+@startuml AI Agent Sequence
+
+' 样式设置
+skinparam monochrome true
+skinparam shadowing false
+
+actor User
+participant "Conversation Loop" as CL
+participant "System Prompt" as SP
+participant "Context Manager" as CM
+participant "Tool Manager" as TM
+participant "Response Parser" as RP
+
+' 初始化流程
+User -> CL: 提交任务
+activate CL
+
+CL -> SP: 初始化系统提示词
+activate SP
+SP --> CL: 返回配置
+deactivate SP
+
+CL -> CM: 收集环境上下文
+activate CM
+CM --> CL: 返回上下文信息
+deactivate CM
+
+' 工具执行循环
+loop 直到任务完成
+    CL -> RP: 分析当前状态
+    activate RP
+    RP --> CL: 需要执行的工具
+    deactivate RP
+    
+    alt 需要执行工具
+        CL -> TM: 执行工具调用
+        activate TM
+        TM -> User: 请求确认
+        User --> TM: 确认执行
+        TM --> CL: 返回执行结果
+        deactivate TM
+    else 任务完成
+        CL -> User: 返回完成结果
+        deactivate CL
+    end
+end
+
+@enduml 

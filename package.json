@@ -1,0 +1,22 @@
+{
+  "name": "ai-demo",
+  "version": "1.0.0",
+  "description": "AI Provider Demo",
+  "type": "module",
+  "scripts": {
+    "start": "tsx src/demo.mts",
+    "dev": "tsx src/demo.mts",
+    "demo": "tsx src/demo.mts",
+    "check-types": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.26.0",
+    "axios": "^1.7.4",
+    "dotenv": "^16.4.7"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "tsx": "^4.6.2",
+    "typescript": "^5.4.2"
+  }
+}

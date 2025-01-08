@@ -1,0 +1,33 @@
+@startuml AI Agent Workflow
+
+' 样式设置
+skinparam monochrome true
+skinparam shadowing false
+
+' 工作流程
+(*) --> "接收用户任务"
+--> "加载系统提示词"
+--> "收集环境上下文"
+
+if "需要更多信息?" then
+    -->[是] "选择合适工具"
+    --> "执行工具调用"
+    --> "等待用户确认"
+    if "用户确认?" then
+        -->[是] "处理工具结果"
+        --> "需要更多信息?"
+    else
+        -->[否] "中止操作"
+        --> (*)
+    endif
+else
+    -->[否] "生成完成响应"
+    --> "尝试任务完成"
+    if "任务完成?" then
+        -->[是] (*)
+    else
+        -->[否] "需要更多信息?"
+    endif
+endif
+
+@enduml 

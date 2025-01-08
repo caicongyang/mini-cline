@@ -1,0 +1,18 @@
+out
+dist
+node_modules
+.vscode-test/
+
+.DS_Store
+
+# Builds
+bin/
+roo-cline-*.vsix
+
+# Local prompts and rules
+/local-prompts
+
+# Test environment
+.test_env
+
+.history
