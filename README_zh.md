@@ -26,9 +26,9 @@
 
 环境要求
 -------
-• Node.js (v22)
-• npm
-• Claude 或 DeepSeek 的 API 密钥
+• Node.js (v22)  
+• npm  
+• Claude 或 DeepSeek 的 API 密钥  
 
 快速开始
 -------
@@ -48,10 +48,10 @@
 使用示例
 -------
 1. 交互模式（推荐新手使用）：
-   • 运行：npm run demo
-   • 输入你的请求
-   • 查看结果
-   • 输入 'exit' 退出
+   • 运行：npm run demo  
+   • 输入你的请求  
+   • 查看结果  
+   • 输入 'exit' 退出  
 
 2. 直接命令模式：
    • 运行：npm run demo -- "创建一个计算斐波那契数列的 JavaScript 文件"
@@ -63,10 +63,10 @@
 
 你可以问什么
 ----------
-• "创建一个 hello world HTML 文件"
-• "写一个计算质数的函数"
-• "解释 async/await 是如何工作的"
-• "创建一个待办事项列表的 React 组件"
+• "创建一个 hello world HTML 文件"  
+• "写一个计算质数的函数"  
+• "解释 async/await 是如何工作的"  
+• "创建一个待办事项列表的 React 组件"  
 
 项目结构
 -------
