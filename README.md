@@ -26,9 +26,9 @@ It's that simple! Just tell the AI what you want to do in natural language.
 
 Prerequisites
 ------------
-• Node.js (v22)
-• npm
-• An API key for either Claude or DeepSeek
+• Node.js (v22)  
+• npm  
+• An API key for either Claude or DeepSeek  
 
 Quick Start
 -----------
@@ -37,7 +37,7 @@ Quick Start
 
 2. Create .env file and add your API key:
    ANTHROPIC_API_KEY=your_claude_api_key_here
-   # or
+   or
    DEEPSEEK_API_KEY=your_deepseek_api_key_here
 
 3. Start using it:
@@ -48,60 +48,60 @@ That's it! Now you can start talking to the AI assistant.
 Usage Examples
 -------------
 1. Interactive Mode (Recommended for beginners):
-   • Run: npm run demo
-   • Type your request
-   • See results
-   • Type 'exit' to quit
+   • Run: npm run demo  
+   • Type your request  
+   • See results  
+   • Type 'exit' to quit  
 
 2. Direct Command Mode:
-   • Run: npm run demo -- "Create a simple JavaScript file that calculates fibonacci numbers"
-   • See results immediately
-
-3. Shell Script (Optional):
-   • First time: chmod +x demo.sh
-   • Then use: ./demo.sh "your request here"
+   • Run: npm run demo -- "Create a simple JavaScript file that calculates fibonacci numbers"  
+   • See results immediately  
+ 
+3. Shell Script (Optional):  
+   • First time: chmod +x demo.sh  
+   • Then use: ./demo.sh "your request here"  
 
 Things You Can Ask
 -----------------
-• "Create a hello world HTML file"
-• "Write a function to calculate prime numbers"
-• "Explain how async/await works"
-• "Create a React component for a todo list"
+• "Create a hello world HTML file"  
+• "Write a function to calculate prime numbers"  
+• "Explain how async/await works"  
+• "Create a React component for a todo list"  
 
 Project Structure
 ---------------
 .
-├── .env                # API keys
-├── package.json       # Dependencies and scripts
-├── tsconfig.json      # TypeScript config
-├── demo.sh           # Shell script helper
-└── src/
-    └── demo.mts      # Main application code
+├── .env                # API keys  
+├── package.json       # Dependencies and scripts  
+├── tsconfig.json      # TypeScript config  
+├── demo.sh           # Shell script helper  
+└── src/  
+    └── demo.mts      # Main application code  
 
 Features
 --------
-• Interactive CLI mode
-• Command-line argument support
-• Basic file operations (read/write)
-• Multiple AI provider support (Claude/DeepSeek)
-• Natural language code generation
-• Code explanation and modification
+• Interactive CLI mode  
+• Command-line argument support  
+• Basic file operations (read/write)  
+• Multiple AI provider support (Claude/DeepSeek)  
+• Natural language code generation  
+• Code explanation and modification  
 
 Key Differences from Cline
 -------------------------
 While the original Cline project offers:
-• Full VS Code integration
-• Browser automation
-• GUI interactions
-• Advanced file management
-• Terminal integration
-• MCP server support
+• Full VS Code integration  
+• Browser automation  
+• GUI interactions  
+• Advanced file management  
+• Terminal integration  
+• MCP server support  
 
-This mini version focuses on:
-• Basic CLI interface
-• Simple file operations
-• Core AI interactions
-• Learning/demonstration purposes
+This mini version focuses on:  
+• Basic CLI interface  
+• Simple file operations  
+• Core AI interactions  
+• Learning/demonstration purposes  
 
 License
 -------
