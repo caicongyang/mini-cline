@@ -37,7 +37,7 @@
 
 2. 创建 .env 文件并添加你的 API 密钥：
    ANTHROPIC_API_KEY=你的_claude_api_密钥
-   # 或者
+   或者  
    DEEPSEEK_API_KEY=你的_deepseek_api_密钥
 
 3. 开始使用：
@@ -71,21 +71,21 @@
 项目结构
 -------
 .
-├── .env                # API 密钥
-├── package.json       # 依赖和脚本
-├── tsconfig.json      # TypeScript 配置
-├── demo.sh           # Shell 脚本助手
-└── src/
-    └── demo.mts      # 主应用代码
+├── .env                # API 密钥  
+├── package.json       # 依赖和脚本  
+├── tsconfig.json      # TypeScript 配置  
+├── demo.sh           # Shell 脚本助手  
+└── src/  
+    └── demo.mts      # 主应用代码  
 
 功能特性
 -------
-• 交互式命令行模式
-• 命令行参数支持
-• 基本文件操作（读/写）
-• 多 AI 提供商支持（Claude/DeepSeek）
-• 自然语言代码生成
-• 代码解释和修改
+• 交互式命令行模式  
+• 命令行参数支持  
+• 基本文件操作（读/写）  
+• 多 AI 提供商支持（Claude/DeepSeek）  
+• 自然语言代码生成  
+• 代码解释和修改  
 
 与 Cline 的主要区别
 ----------------
